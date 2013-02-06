@@ -4,6 +4,7 @@ WebInspector.loaded = function() {
     "http://" + window.location.host + '/'
     ,
     {
+      resource: window.location.pathname.substr(1) + 'socket.io',
       reconnect: false
     }
   )
