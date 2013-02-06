@@ -15215,6 +15215,8 @@ this.lastPathComponent = "";
 
 
 
+this.url = this.url || ''
+url = url || ''
 var match = url.match(/^([^:]+):\/\/([^\/:]*)(?::([\d]+))?(?:(\/[^#]*)(?:#(.*))?)?$/i);
 if (match) {
 this.isValid = true;
