@@ -61,6 +61,11 @@ fs.readFile(path.join(__dirname, '../config.json'), function(err, data) {
 		config.webHost = options.webHost
 	}
 
+        if(process.env.webPort)
+          config.webPort = +process.env.webPort
+        if(process.env.debugPort)
+          config.debugPort = +process.env.debugPort
+
 	var debugServer = new DebugServer()
 	debugServer.on('close', function () {
 		console.log('session closed')
